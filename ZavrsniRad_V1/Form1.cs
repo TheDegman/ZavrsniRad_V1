@@ -29,26 +29,41 @@ namespace ZavrsniRad_V1
         {
             PristupBazi db=new PristupBazi();
             ljudi=db.PrijavaKorisnik();
-            
+
             //if(ljudi.Contains(new Korisnik { Email = emailTB.Text, Lozinka = lozinkaTB.Text }))
             //{
             //    emailTB.Text = null;
             //    lozinkaTB.Text = null;
-
-
-
             //}
             //else
             //{
             //    prijavaBTN.Text = null;
             //}
+            //if((ljudi.Exists(x => x.Email == emailTB.Text))||(ljudi.Exists(x => x.Lozinka == lozinkaTB.Text)))
+            //{
+            //    VoditeljForma form2 = new VoditeljForma();
+            //    form2.Show();
+            //}
+            //else
+            //{
+            //    string message = "Krivi email ili lozinka";
+            //    string title = "Greška";
+            //    MessageBox.Show(message, title);
+            //    emailTB.Text = null;
+            //    lozinkaTB.Text = null;
 
-            if((ljudi.Exists(x => x.Email == emailTB.Text))||(ljudi.Exists(x => x.Lozinka == lozinkaTB.Text)))
+            //}
+            int resultEmail = ljudi.FindIndex(x => x.Email == emailTB.Text);
+            int resultLozinka = ljudi.FindIndex(x => x.Lozinka == lozinkaTB.Text);
+
+            label4.Text = resultLozinka.ToString();
+            label6.Text = resultEmail.ToString();
+
+            if(resultEmail == resultLozinka)
             {
-                
+                this.Hide();
                 VoditeljForma form2 = new VoditeljForma();
                 form2.Show();
-
             }
             else
             {
@@ -59,6 +74,7 @@ namespace ZavrsniRad_V1
                 lozinkaTB.Text = null;
 
             }
+
 
 
 
