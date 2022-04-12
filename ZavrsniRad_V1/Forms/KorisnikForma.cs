@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ZavrsniRad_V1
 {
-    public partial class VoditeljForma : Form
+    public partial class KorisnikForma : Form
     {
-        public VoditeljForma()
+        public KorisnikForma()
         {
             InitializeComponent();
-            Form1 form1 = new Form1();
-            form1.Close();
         }
     }
 }

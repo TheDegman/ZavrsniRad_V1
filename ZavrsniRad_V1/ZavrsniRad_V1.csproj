@@ -67,23 +67,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KorisnikForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KorisnikForma.Designer.cs">
+      <DependentUpon>KorisnikForma.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelBaze\Korisnik.cs" />
     <Compile Include="ModelBaze\PristupBazi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VoditeljForma.cs">
+    <Compile Include="Forms\VoditeljForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VoditeljForma.Designer.cs">
+    <Compile Include="Forms\VoditeljForma.Designer.cs">
       <DependentUpon>VoditeljForma.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -95,7 +101,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VoditeljForma.resx">
+    <EmbeddedResource Include="Forms\VoditeljForma.resx">
       <DependentUpon>VoditeljForma.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

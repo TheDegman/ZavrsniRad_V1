@@ -56,14 +56,26 @@ namespace ZavrsniRad_V1
             int resultEmail = ljudi.FindIndex(x => x.Email == emailTB.Text);
             int resultLozinka = ljudi.FindIndex(x => x.Lozinka == lozinkaTB.Text);
 
-            label4.Text = resultLozinka.ToString();
-            label6.Text = resultEmail.ToString();
+            
 
             if(resultEmail == resultLozinka)
             {
-                this.Hide();
-                VoditeljForma form2 = new VoditeljForma();
-                form2.Show();
+                if (ljudi[resultEmail].UlogaID==1)
+                {
+
+                    this.Hide();
+                    VoditeljForma form2 = new VoditeljForma(emailTB.Text,lozinkaTB.Text);
+                    form2.Show();
+
+                }
+                else
+                {
+                    this.Hide();
+                    KorisnikForma form3 = new KorisnikForma();
+                    form3.Show();
+
+                }
+                
             }
             else
             {
@@ -79,6 +91,14 @@ namespace ZavrsniRad_V1
 
 
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            VoditeljForma form2 = new VoditeljForma(emailTB.Text, lozinkaTB.Text);
+            form2.Show();
 
         }
     }

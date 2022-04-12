@@ -9,7 +9,7 @@ namespace ZavrsniRad_V1.ModelBaze
     class Korisnik
     {
         public int KorisnikID { get; set; }
-        public string UlogaID { get; set; }
+        public int UlogaID { get; set; }
         public string Email { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
