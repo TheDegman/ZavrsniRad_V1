@@ -51,11 +51,14 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +68,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Forms\Form1.cs">
@@ -73,24 +79,30 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\KorisnikForma.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Forms\KorisnikUC.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\KorisnikForma.Designer.cs">
-      <DependentUpon>KorisnikForma.cs</DependentUpon>
+    <Compile Include="Forms\KorisnikUC.Designer.cs">
+      <DependentUpon>KorisnikUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VoditeljUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\VoditeljUC.Designer.cs">
+      <DependentUpon>VoditeljUC.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelBaze\Korisnik.cs" />
     <Compile Include="ModelBaze\PristupBazi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\VoditeljForma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\VoditeljForma.Designer.cs">
-      <DependentUpon>VoditeljForma.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KorisnikUC.resx">
+      <DependentUpon>KorisnikUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VoditeljUC.resx">
+      <DependentUpon>VoditeljUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,9 +113,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\VoditeljForma.resx">
-      <DependentUpon>VoditeljForma.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

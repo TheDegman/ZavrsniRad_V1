@@ -12,6 +12,10 @@ namespace ZavrsniRad_V1.ModelBaze
         public int UlogaID { get; set; }
         public string Email { get; set; }
         public string Ime { get; set; }
+        public string ImeIspis
+        {
+            get { return $"{Ime}"; }
+        }
         public string Prezime { get; set; }
         public DateTime DatumRodjenja { get; set; }
         public string Adresa { get; set; }

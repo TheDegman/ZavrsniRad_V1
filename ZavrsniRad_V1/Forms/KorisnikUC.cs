@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ZavrsniRad_V1
+namespace ZavrsniRad_V1.Forms
 {
-    public partial class KorisnikForma : Form
+    public partial class KorisnikUC : UserControl
     {
-        public KorisnikForma()
+        public KorisnikUC()
         {
             InitializeComponent();
         }
